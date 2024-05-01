@@ -1,1 +1,106 @@
+:root {
+  --bg-color: hsl(210, 60%, 98%);
+  --main-bg-color: hsl(0, 0%, 100%);
+  --notif-bg-color: hsl(210, 60%, 98%);
+  --msg-bg-color: hsl(211, 68%, 94%);
+  --primary-font-color: hsl(219, 14%, 63%);
+  --secondary-font-color: hsl(219, 12%, 42%);
+  --bold-font-color: hsl(224, 21%, 14%);
+  --accent-color: hsl(219, 85%, 26%);
+  --small-font-size: 1rem;
+  --medium-font-size: 1.25rem;
+  --large-font-size: 1.5rem;
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Plus Jarkata Sans";
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+body {
+  font-family: "Plus Jarkata Sans", sans-serif;
+  padding: 1em;
+  background-color: var(--bg-color);
+  font-size: 16px;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+.main-container {
+  width: 700px;
+  border-radius: 1em;
+  padding: 1em;
+  background-color: var(--main-bg-color);
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.header h1 {
+  font-size: var(--large-font-size);
+}
+.header span {
+  background-color: var(--accent-color);
+  border-radius: 0.2rem;
+  color: #fff;
+  font-size: var(--small-font-size);
+  padding: 0rem 0.75rem;
+  margin-left: 0.75rem;
+}
+.header p:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--notif-bg-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0rem;
+}
+.notification img {
+  width: 50px;
+}
+.notification span {
+  margin-right: 0.5rem;
+}
+.notif-details p {
+  margin: 0px;
+  padding: 0px;
+}
+.notif-msg:hover {
+  background-color: var(--msg-bg-color);
+  cursor: pointer;
+}
 
+.notif-msg {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  border: 2px solid var(--msg-bg-color);
+  color: var(--primary-font-color);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+.notif-sender {
+  font-weight: 700;
+  color: var(--bold-font-color);
+}
+.notif-item {
+  font-weight: 700;
+  color: var(--secondary-font-color);
+}
+.notif-action {
+  color: var(--primary-font-color);
+  font-weight: 600;
+}
+.notif-time {
+  color: var(--primary-font-color);
+}
