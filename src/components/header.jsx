@@ -1,11 +1,24 @@
-const NotifHeader = () => {
+const NotifHeader = ({ notifications, setNotification }) => {
+  let unreadNo = 0;
+  const setAllRead = () => {
+    const temp = notifications.map((item) => {
+      let readitem = { ...item, unread: false };
+      return readitem;
+    });
+    setNotification(temp);
+  };
+  notifications.forEach((item) => {
+    if (item.unread == true) {
+      unreadNo += 1;
+    }
+  });
   return (
     <>
       <header className="header">
         <h1>
-          Notifications <span>3</span>
+          Notifications <span>{unreadNo}</span>
         </h1>
-        <p>Mark all as read</p>
+        <p onClick={setAllRead}>Mark all as read</p>
       </header>
     </>
   );

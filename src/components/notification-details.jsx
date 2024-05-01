@@ -1,10 +1,10 @@
-const NotifDetails = () => {
+const NotifDetails = ({ name, action, item, time }) => {
   return (
     <div className="notif-details">
-      <span className="notif-sender">Angela Gray</span>
-      <span className="notif-action">reacted to your post</span>
-      <span className="notif-item">My first tournament today!</span>
-      <p className="notif-time">1m ago</p>
+      <span className="notif-sender">{name}</span>
+      <span className="notif-action">{action}</span>
+      <span className="notif-item">{item}</span>
+      <p className="notif-time">{time}</p>
     </div>
   );
 };

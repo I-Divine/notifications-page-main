@@ -1,11 +1,18 @@
 import Notification from "./notification";
-
-const NotifContainer = () => {
+const NotifContainer = ({ notifications, setNotification }) => {
+  console.log(notifications);
   return (
     <div className="notifContainer">
-      <Notification />
-      <Notification />
-      <Notification />
+      {notifications.map((item) => {
+        return (
+          <Notification
+            key={item.id}
+            notif_info={item}
+            notifications={notifications}
+            setNotification={setNotification}
+          />
+        );
+      })}
     </div>
   );
 };

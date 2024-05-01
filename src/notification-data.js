@@ -1,4 +1,4 @@
-const notifications = [
+export const notificationsData = [
   {
     id: 1,
     avatar_url: "/images/avatar-mark-webber.webp",
@@ -32,11 +32,11 @@ const notifications = [
     action: "sent you a private message",
     message:
       "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
-    unread: true,
+    unread: false,
     time: "5 days ago",
   },
   {
-    id: 4,
+    id: 5,
     avatar_url: "/images/avatar-kimberly-smith.webp",
     name: "Kimberly Smith",
     action: "commented on your picture",
@@ -45,7 +45,7 @@ const notifications = [
     time: "1 week ago",
   },
   {
-    id: 4,
+    id: 6,
     avatar_url: "/images/avatar-nathan-peterson.webp",
     name: "Nathan Peterson",
     action: "reacted to your post",
@@ -54,13 +54,12 @@ const notifications = [
     time: "2 weeks ago",
   },
   {
-    id: 4,
-    avatar_url: "/images/avatar-rizky-hasanuddin",
-    name: "Rizky Hasanuddin",
-    action: "sent you a private message",
-    message:
-      "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
-    unread: true,
+    id: 7,
+    avatar_url: "/images/avatar-anna-kim.webp",
+    name: "Anna kim",
+    action: "left the group",
+    item: "Chess Club",
+    unread: false,
     time: "5 days ago",
   },
 ];
